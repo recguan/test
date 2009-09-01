@@ -1,0 +1,86 @@
+// ls(x, null) & x != null
+proc findLast(x; y) {
+  w := [x];
+  if w = null then y := x
+  else
+    unknown(x; z);
+    findLast(z; y)
+  fi
+}
+// ls(x, y) * y|->null
+
+// ls(x, null) * ls(y, null)
+proc append (y; x) {
+  if x = null then x := y
+  else
+    w := [x];
+    if w = null then [x] := y
+    else append(y; w)
+    fi
+  fi
+}
+// ls(x, y) * ls(y, null)
+
+// ls(x, null)
+proc copy(x; y) {
+  if x = null then y := null
+  else
+    w := [x];
+    copy (w; y);
+    z := new(); // unknown(; y);
+    [z] := y;   // unknown(; y);
+    y := z      // unknown(; y);
+    // Or directly y := new(y) // unknown(; y);
+  fi
+}
+// ls(x, null) * ls(y, null)
+
+// ls(x, null)
+proc revCopy(x; y) {
+  if x = null then skip
+  else
+    z := new(); // unknown(; y);
+    [z] := y;   // unknown(; y);
+    y := z;     // unknown(; y);
+    // Or directly y := new(y); // unknown(; y);
+    w := [x];
+    revCopy (w; y)
+  fi
+}
+// ls(x, null) * ls(y, old(y))
+
+
+// ls(x, null)
+proc clear(; x) {
+  if x = null then skip
+  else
+    w := [x];
+    dispose(x); // unknown(x; );
+    x := w;
+    clear(; x)
+  fi
+}
+// emp & x = null
+
+// ls(x, null)
+proc iWillFail(x; y) {
+  if x = null then y := null
+  else
+    unknown(x; )
+  fi
+}
+// ls(x, y) * ls(y, null)
+
+// ls(x, null) * ls(y, null) * ls(z, null)
+proc appendThree(z; x, y) {
+  unknown(y; x);
+  unknown(z; x)
+}
+// ls(x, y) * ls(y, z) * ls(z, null)
+
+// ls(x, null) & x != null
+proc towardsLast(x; y) {
+  unknown(x; y);
+  unknown(y; y)
+}
+// ls(x, y) * ls(y, null) & x != null

@@ -1,0 +1,27 @@
+module Type = struct end;;
+module Utils = struct end;;
+module Print = struct end;;
+module EntAbd = struct end;;
+module Rearrangement = struct end;;
+module Execution = struct end;;
+module Abstraction = struct end;;
+module Semantic = struct end;;
+module AbdRearrangement= struct end;;
+module AbdExecution = struct end;;
+module AbdAbstraction = struct end;;
+module AbdSemantic = struct end;;
+module VerUnk = struct end;;
+
+#use "e:\\Projects\\Ver_UnkCd\\src\\type.ml";;
+#use "e:\\Projects\\Ver_UnkCd\\src\\utils.ml";;
+#use "e:\\Projects\\Ver_UnkCd\\src\\print.ml";;
+#use "e:\\Projects\\Ver_UnkCd\\src\\entAbd.ml";;
+#use "e:\\Projects\\Ver_UnkCd\\src\\rearrangement.ml";;
+#use "e:\\Projects\\Ver_UnkCd\\src\\execution.ml";;
+#use "e:\\Projects\\Ver_UnkCd\\src\\abstraction.ml";;
+#use "e:\\Projects\\Ver_UnkCd\\src\\semantic.ml";;
+#use "e:\\Projects\\Ver_UnkCd\\src\\abdRearrangement.ml";;
+#use "e:\\Projects\\Ver_UnkCd\\src\\abdExecution.ml";;
+#use "e:\\Projects\\Ver_UnkCd\\src\\abdAbstraction.ml";;
+#use "e:\\Projects\\Ver_UnkCd\\src\\abdSemantic.ml";;
+#use "e:\\Projects\\Ver_UnkCd\\src\\verUnk.ml";;

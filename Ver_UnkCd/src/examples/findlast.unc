@@ -1,0 +1,25 @@
+
+void findlast(node x; ref node z) {
+     node w, y;
+     w := x.next;
+     [if (w == null) 
+     {
+	z := w;
+     } else {
+       unkProc(x; y);
+       findlast(y;z);
+     }]
+}
+
+let c_1 = Atom(Assign(Var"w", Ref(Var"x")));;
+let u = If_r (Eq(Var"w",Nil), Seq[Atom(Assign(Var"z", Var"x")); Atom(Assert(SH([],[])))], V(Atom(Assert(SH([],[]))), UnkFun("foo", [Var"x"], [Var"y"]), [Var"x"], [Var"y"], Seq[Atom(Assert(SH([],[]))); Fun ("fT",[Var"y"],[Var"z"], SH([Neq(Var"y",Nil)],[Lseg(Var"y",Nil)]), SH([],[Lseg(Var"y",Var"z");Point(Var"z",Nil)])); Atom(Assert(SH([],[])))], [Var"w";Var"x"], [Var"y";Var"z"]));;
+let xs = [Var"x"];;
+let ys = [Var"y"];;
+let c_2 = Atom(Skip);;
+let x0s = [Var"w";Var"x"];;
+let y0s = [Var"y";Var"z"];;
+
+
+verify (c_1, u, xs, ys, c_2, x0s, y0s) 
+
+[(SH([Neq(Var"x",Nil)],[Lseg(Var"x",Nil)]), SH([],[Lseg(Var"x",Var"z");Point(Var"z",Nil)]))];;
